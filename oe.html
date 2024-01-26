@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
+    
+    <!-- Include Bootstrap CSS (you can change the version if needed) -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Include Font Awesome CSS (you can change the version if needed) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GV Admin</title>
+    
+    <!-- Include Firebase JavaScript SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    
+    <!-- Include your app.js file -->
+    <script src="/scripts/admin/add-user/add-part.js"></script>
+    
+    <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+    <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">Email address</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Password</label>
+      </div>
+
+    <!-- Bootstrap container class for responsiveness -->
+    <div class="container">
+        <!-- Home icon with a link to the admin.html page -->
+        <a href="index.html" class="home-link">
+            <i class="fas fa-home"></i>
+        </a>
+
+        <div class="text-center">
+            <h1>Gathery Voting Admin</h1>
+            <hr class="w-80">
+
+            <!-- Bootstrap form class -->
+            <form class="fr">
+                <div class="form-group">
+                    <label for="login">Додати учасника:</label>
+                    <input type="text" class="form-control" id="login" placeholder="Login" required>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" class="form-control" id="teacher" placeholder="Teacher" required>
+                </div>
+
+                <button onclick="addUser()" class="btn btn-primary">Додати</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap JS and Popper.js scripts (required for Bootstrap components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
